@@ -1,0 +1,10 @@
+
+The following files are placed in the public domain:
+
+   bench.c
+   ctx.c
+   genm.sh
+   cycles.h
+   common.h
+   affinity.h
+

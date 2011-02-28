@@ -17,8 +17,12 @@ To use::
 
   make
 
-For additional results, configure and build PCL in one or more of the
-following ways::
+For additional results, you can check out the modified PCL library with::
+ 
+  git clone git://github.com/knz/pcl.git
+  (cd pcl && git checkout coshed-bench-fixups)
+
+Then configure and build PCL in one or more of the following ways::
 
   mkdir pcl_sigjmp_64 && \
        cd pcl_sigjmp_64 && \
