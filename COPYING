@@ -4,6 +4,8 @@ The following files are placed in the public domain:
    bench.c
    ctx.c
    genm.sh
+   runb.sh
+   genres.sh
    cycles.h
    common.h
    affinity.h
