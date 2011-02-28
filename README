@@ -11,11 +11,15 @@ To use::
   sysctl -a >sysctl-a.txt
   cat /proc/cpuinfo >cpuinfo.txt
 
-  ln -s ../*.c ../*.h ../genm.sh .
+  ln -s ../*.c ../*.h ../*.sh .
 
-  ./genm.sh
+  ./genm.sh    # this generates a Makefile
 
-  make
+  make         # this build the programs
+
+  ./runb.sh    # this runs the programs and generates .log files
+
+  ./genres.sh  # this compiles *.log into results.txt
 
 For additional results, you can check out the modified PCL library with::
  
