@@ -1,0 +1,55 @@
+Benchmark for cooperative scheduling primitives
+===============================================
+
+To use::
+
+  mkdir yoursystem
+  cd yoursystem
+
+  uname -a >uname.txt
+  gcc --version >compiler.txt
+  sysctl -a >sysctl-a.txt
+  cat /proc/cpuinfo >cpuinfo.txt
+
+  ln -s ../*.c ../*.h ../genm.sh .
+
+  ./genm.sh
+
+  make
+
+For additional results, configure and build PCL in one or more of the
+following ways::
+
+  mkdir pcl_sigjmp_64 && \
+       cd pcl_sigjmp_64 && \
+       ../../pcl/configure CPPFLAGS=-DFORCE_SIGJMP CC="gcc -m64" && \
+       make
+
+  mkdir pcl_sigcontext_64 && \
+       cd pcl_sigcontext_64 && \
+       ../../pcl/configure CPPFLAGS=-DFORCE_SIGCONTEXT CC="gcc -m64" && \
+       make
+
+  mkdir pcl_ucontext_64 && \
+       cd pcl_ucontext_64 && \
+       ../../pcl/configure CC="gcc -m64" && \
+       make
+
+  mkdir pcl_sigjmp_32 && \
+       cd pcl_sigjmp_32 && \
+       ../../pcl/configure CPPFLAGS=-DFORCE_SIGJMP CC="gcc -m32" && \
+       make
+
+  mkdir pcl_sigcontext_32 && \
+       cd pcl_sigcontext_32 && \
+       ../../pcl/configure CPPFLAGS=-DFORCE_SIGCONTEXT CC="gcc -m32" && \
+       make
+
+  mkdir pcl_ucontext_32 && \
+       cd pcl_ucontext_32 && \
+       ../../pcl/configure CC="gcc -m32" && \
+       make
+
+
+Then run ``./genm.sh`` again and then ``make``.
+
